@@ -9,27 +9,27 @@ namespace TestClient
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Extension methods for ReturnStreamOperations.
+    /// Extension methods for IdentityTestRequest2Operations.
     /// </summary>
-    public static partial class ReturnStreamOperationsExtensions
+    public static partial class IdentityTestRequest2OperationsExtensions
     {
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static object Get(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json")
+            public static object Get(this IIdentityTestRequest2Operations operations, object personId, string format = "json")
             {
-                return operations.GetAsync(data, format).GetAwaiter().GetResult();
+                return operations.GetAsync(personId, format).GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
@@ -37,9 +37,9 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> GetAsync(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IIdentityTestRequest2Operations operations, object personId, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetWithHttpMessagesAsync(personId, format, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -48,20 +48,20 @@ namespace TestClient
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static object Create(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json")
+            public static object Create(this IIdentityTestRequest2Operations operations, object personId, string format = "json")
             {
-                return operations.CreateAsync(data, format).GetAwaiter().GetResult();
+                return operations.CreateAsync(personId, format).GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
@@ -69,9 +69,9 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> CreateAsync(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IIdentityTestRequest2Operations operations, object personId, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.CreateWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.CreateWithHttpMessagesAsync(personId, format, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -80,20 +80,20 @@ namespace TestClient
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static object Post(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json")
+            public static object Post(this IIdentityTestRequest2Operations operations, object personId, string format = "json")
             {
-                return operations.PostAsync(data, format).GetAwaiter().GetResult();
+                return operations.PostAsync(personId, format).GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
@@ -101,9 +101,9 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> PostAsync(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IIdentityTestRequest2Operations operations, object personId, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.PostWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.PostWithHttpMessagesAsync(personId, format, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -112,20 +112,20 @@ namespace TestClient
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static object Delete(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json")
+            public static object Delete(this IIdentityTestRequest2Operations operations, object personId, string format = "json")
             {
-                return operations.DeleteAsync(data, format).GetAwaiter().GetResult();
+                return operations.DeleteAsync(personId, format).GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            /// <param name='data'>
+            /// <param name='personId'>
             /// </param>
             /// <param name='format'>
             /// Specifies response output format
@@ -133,9 +133,9 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> DeleteAsync(this IReturnStreamOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IIdentityTestRequest2Operations operations, object personId, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.DeleteWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.DeleteWithHttpMessagesAsync(personId, format, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

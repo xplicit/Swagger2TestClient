@@ -33,7 +33,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
+            public static object Get(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
             {
                 return operations.GetAsync(name, format, width, height, fontSize, foreground, background, format1).GetAwaiter().GetResult();
             }
@@ -61,7 +61,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(name, format, width, height, fontSize, foreground, background, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -89,7 +89,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
+            public static object Create(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
             {
                 return operations.CreateAsync(name, format, width, height, fontSize, foreground, background, format1).GetAwaiter().GetResult();
             }
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(name, format, width, height, fontSize, foreground, background, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -145,7 +145,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
+            public static object Post(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
             {
                 return operations.PostAsync(name, format, width, height, fontSize, foreground, background, format1).GetAwaiter().GetResult();
             }
@@ -173,7 +173,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(name, format, width, height, fontSize, foreground, background, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -201,7 +201,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
+            public static object Delete(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json")
             {
                 return operations.DeleteAsync(name, format, width, height, fontSize, foreground, background, format1).GetAwaiter().GetResult();
             }
@@ -229,7 +229,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IDrawImageOperations operations, string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(name, format, width, height, fontSize, foreground, background, format1, null, cancellationToken).ConfigureAwait(false))
                 {

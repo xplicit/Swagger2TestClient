@@ -223,6 +223,11 @@ namespace TestClient
         IEchoCollectionsOperations EchoCollections { get; }
 
         /// <summary>
+        /// Gets the IIdentityTestRequest2Operations.
+        /// </summary>
+        IIdentityTestRequest2Operations IdentityTestRequest2 { get; }
+
+        /// <summary>
         /// Gets the IQueryRockstarsOperations.
         /// </summary>
         IQueryRockstarsOperations QueryRockstars { get; }

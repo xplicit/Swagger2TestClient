@@ -12,10 +12,12 @@ namespace TestClient
     using System.Threading.Tasks;
 
     /// <summary>
-    /// RequiresRole operations.
+    /// IdentityTestRequest2Operations operations.
     /// </summary>
-    public partial interface IRequiresRole
+    public partial interface IIdentityTestRequest2Operations
     {
+        /// <param name='personId'>
+        /// </param>
         /// <param name='format'>
         /// Specifies response output format
         /// </param>
@@ -28,7 +30,12 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(object personId, string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <param name='personId'>
+        /// </param>
         /// <param name='format'>
         /// Specifies response output format
         /// </param>
@@ -41,7 +48,12 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<object>> CreateWithHttpMessagesAsync(string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<HttpOperationResponse<object>> CreateWithHttpMessagesAsync(object personId, string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <param name='personId'>
+        /// </param>
         /// <param name='format'>
         /// Specifies response output format
         /// </param>
@@ -54,7 +66,12 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<object>> PostWithHttpMessagesAsync(string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<HttpOperationResponse<object>> PostWithHttpMessagesAsync(object personId, string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <param name='personId'>
+        /// </param>
         /// <param name='format'>
         /// Specifies response output format
         /// </param>
@@ -67,6 +84,9 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<object>> DeleteWithHttpMessagesAsync(string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<HttpOperationResponse<object>> DeleteWithHttpMessagesAsync(object personId, string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

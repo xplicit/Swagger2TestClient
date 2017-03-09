@@ -60,7 +60,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -80,17 +80,7 @@ namespace TestClient
             List<string> _queryParameters = new List<string>();
             if (data != null)
             {
-                if (data.Count == 0)
-                {
-                    _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(string.Empty)));
-                }
-                else
-                {
-                    foreach (var _item in data)
-                    {
-                        _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(_item.ToString() ?? string.Empty)));
-                    }
-                }
+                _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(data, Client.SerializationSettings).Trim('"'))));
             }
             if (format != null)
             {
@@ -207,7 +197,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<object>> CreateWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<object>> CreateWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -347,7 +337,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<object>> PostWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<object>> PostWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -487,7 +477,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<object>> DeleteWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<object>> DeleteWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -507,17 +497,7 @@ namespace TestClient
             List<string> _queryParameters = new List<string>();
             if (data != null)
             {
-                if (data.Count == 0)
-                {
-                    _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(string.Empty)));
-                }
-                else
-                {
-                    foreach (var _item in data)
-                    {
-                        _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(_item.ToString() ?? string.Empty)));
-                    }
-                }
+                _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(data, Client.SerializationSettings).Trim('"'))));
             }
             if (format != null)
             {

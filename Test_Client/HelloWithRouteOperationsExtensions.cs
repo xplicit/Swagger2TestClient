@@ -21,7 +21,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
+            public static object Get(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
             {
                 return operations.GetAsync(name, format).GetAwaiter().GetResult();
             }
@@ -37,7 +37,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(name, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -53,7 +53,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
+            public static object Create(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
             {
                 return operations.CreateAsync(name, format).GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(name, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -85,7 +85,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
+            public static object Post(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
             {
                 return operations.PostAsync(name, format).GetAwaiter().GetResult();
             }
@@ -101,7 +101,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(name, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
+            public static object Delete(this IHelloWithRouteOperations operations, string name = default(string), string format = "json")
             {
                 return operations.DeleteAsync(name, format).GetAwaiter().GetResult();
             }
@@ -133,7 +133,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IHelloWithRouteOperations operations, string name = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(name, format, null, cancellationToken).ConfigureAwait(false))
                 {

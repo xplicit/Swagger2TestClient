@@ -45,7 +45,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<HttpOperationResponse<string>> GetWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='name'>
         /// </param>
         /// <param name='format'>
@@ -75,7 +75,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<HttpOperationResponse<string>> CreateWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<object>> CreateWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='name'>
         /// </param>
         /// <param name='format'>
@@ -105,7 +105,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<HttpOperationResponse<string>> PostWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<object>> PostWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='name'>
         /// </param>
         /// <param name='format'>
@@ -135,6 +135,6 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<HttpOperationResponse<string>> DeleteWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<object>> DeleteWithHttpMessagesAsync(string name, string format = default(string), int? width = default(int?), int? height = default(int?), int? fontSize = default(int?), string foreground = default(string), string background = default(string), string format1 = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

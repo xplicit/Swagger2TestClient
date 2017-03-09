@@ -25,7 +25,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
+            public static object Get(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
             {
                 return operations.GetAsync(name, allTypes, allCollectionTypes, format).GetAwaiter().GetResult();
             }
@@ -45,7 +45,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(name, allTypes, allCollectionTypes, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -65,7 +65,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
+            public static object Create(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
             {
                 return operations.CreateAsync(name, allTypes, allCollectionTypes, format).GetAwaiter().GetResult();
             }
@@ -85,7 +85,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(name, allTypes, allCollectionTypes, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -105,7 +105,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
+            public static object Post(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
             {
                 return operations.PostAsync(name, allTypes, allCollectionTypes, format).GetAwaiter().GetResult();
             }
@@ -125,7 +125,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(name, allTypes, allCollectionTypes, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -145,7 +145,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
+            public static object Delete(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json")
             {
                 return operations.DeleteAsync(name, allTypes, allCollectionTypes, format).GetAwaiter().GetResult();
             }
@@ -165,7 +165,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IHelloAllTypesOperations operations, string name = default(string), object allTypes = default(object), object allCollectionTypes = default(object), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(name, allTypes, allCollectionTypes, format, null, cancellationToken).ConfigureAwait(false))
                 {

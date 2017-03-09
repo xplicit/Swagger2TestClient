@@ -60,7 +60,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<byte[]>>> GetWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<string>> GetWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -80,17 +80,7 @@ namespace TestClient
             List<string> _queryParameters = new List<string>();
             if (data != null)
             {
-                if (data.Count == 0)
-                {
-                    _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(string.Empty)));
-                }
-                else
-                {
-                    foreach (var _item in data)
-                    {
-                        _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(_item.ToString() ?? string.Empty)));
-                    }
-                }
+                _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(data, Client.SerializationSettings).Trim('"'))));
             }
             if (format != null)
             {
@@ -142,7 +132,7 @@ namespace TestClient
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    IList<byte[]> _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_responseContent, Client.DeserializationSettings);
+                    string _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -166,13 +156,13 @@ namespace TestClient
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<byte[]>>();
+            var _result = new HttpOperationResponse<string>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             string _defaultResponseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             try
             {
-                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_defaultResponseContent, Client.DeserializationSettings);
+                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_defaultResponseContent, Client.DeserializationSettings);
             }
             catch (JsonException ex)
             {
@@ -207,7 +197,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<byte[]>>> CreateWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<string>> CreateWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -282,7 +272,7 @@ namespace TestClient
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    IList<byte[]> _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_responseContent, Client.DeserializationSettings);
+                    string _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -306,13 +296,13 @@ namespace TestClient
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<byte[]>>();
+            var _result = new HttpOperationResponse<string>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             string _defaultResponseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             try
             {
-                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_defaultResponseContent, Client.DeserializationSettings);
+                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_defaultResponseContent, Client.DeserializationSettings);
             }
             catch (JsonException ex)
             {
@@ -347,7 +337,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<byte[]>>> PostWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<string>> PostWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -422,7 +412,7 @@ namespace TestClient
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    IList<byte[]> _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_responseContent, Client.DeserializationSettings);
+                    string _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -446,13 +436,13 @@ namespace TestClient
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<byte[]>>();
+            var _result = new HttpOperationResponse<string>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             string _defaultResponseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             try
             {
-                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_defaultResponseContent, Client.DeserializationSettings);
+                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_defaultResponseContent, Client.DeserializationSettings);
             }
             catch (JsonException ex)
             {
@@ -487,7 +477,7 @@ namespace TestClient
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<byte[]>>> DeleteWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<string>> DeleteWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -507,17 +497,7 @@ namespace TestClient
             List<string> _queryParameters = new List<string>();
             if (data != null)
             {
-                if (data.Count == 0)
-                {
-                    _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(string.Empty)));
-                }
-                else
-                {
-                    foreach (var _item in data)
-                    {
-                        _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(_item.ToString() ?? string.Empty)));
-                    }
-                }
+                _queryParameters.Add(string.Format("Data={0}", System.Uri.EscapeDataString(Microsoft.Rest.Serialization.SafeJsonConvert.SerializeObject(data, Client.SerializationSettings).Trim('"'))));
             }
             if (format != null)
             {
@@ -569,7 +549,7 @@ namespace TestClient
                 try
                 {
                     _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    IList<byte[]> _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_responseContent, Client.DeserializationSettings);
+                    string _errorBody =  Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_responseContent, Client.DeserializationSettings);
                     if (_errorBody != null)
                     {
                         ex.Body = _errorBody;
@@ -593,13 +573,13 @@ namespace TestClient
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<byte[]>>();
+            var _result = new HttpOperationResponse<string>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             string _defaultResponseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             try
             {
-                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<IList<byte[]>>(_defaultResponseContent, Client.DeserializationSettings);
+                _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<string>(_defaultResponseContent, Client.DeserializationSettings);
             }
             catch (JsonException ex)
             {

@@ -30,7 +30,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<IList<byte[]>>> GetWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<string>> GetWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='data'>
         /// </param>
         /// <param name='format'>
@@ -45,7 +45,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<IList<byte[]>>> CreateWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<string>> CreateWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='data'>
         /// </param>
         /// <param name='format'>
@@ -60,7 +60,7 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<IList<byte[]>>> PostWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<string>> PostWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='data'>
         /// </param>
         /// <param name='format'>
@@ -75,6 +75,6 @@ namespace TestClient
         /// <exception cref="Microsoft.Rest.HttpOperationException">
         /// Thrown when the operation returned an invalid status code
         /// </exception>
-        Task<HttpOperationResponse<IList<byte[]>>> DeleteWithHttpMessagesAsync(IList<byte[]> data = default(IList<byte[]>), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<string>> DeleteWithHttpMessagesAsync(byte[] data = default(byte[]), string format = "json", Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

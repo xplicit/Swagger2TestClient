@@ -23,7 +23,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
+            public static object Get(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
             {
                 return operations.GetAsync(status, message, format).GetAwaiter().GetResult();
             }
@@ -41,7 +41,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(status, message, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -59,7 +59,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
+            public static object Create(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
             {
                 return operations.CreateAsync(status, message, format).GetAwaiter().GetResult();
             }
@@ -77,7 +77,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(status, message, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -95,7 +95,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
+            public static object Post(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
             {
                 return operations.PostAsync(status, message, format).GetAwaiter().GetResult();
             }
@@ -113,7 +113,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(status, message, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -131,7 +131,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
+            public static object Delete(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json")
             {
                 return operations.DeleteAsync(status, message, format).GetAwaiter().GetResult();
             }
@@ -149,7 +149,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IThrowHttpErrorOperations operations, int status, string message = default(string), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(status, message, format, null, cancellationToken).ConfigureAwait(false))
                 {

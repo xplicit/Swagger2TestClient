@@ -21,7 +21,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
+            public static object Get(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
             {
                 return operations.GetAsync(format, format1).GetAwaiter().GetResult();
             }
@@ -37,7 +37,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(format, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -53,7 +53,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
+            public static object Create(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
             {
                 return operations.CreateAsync(format, format1).GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(format, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -85,7 +85,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
+            public static object Post(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
             {
                 return operations.PostAsync(format, format1).GetAwaiter().GetResult();
             }
@@ -101,7 +101,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(format, format1, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='format1'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
+            public static object Delete(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json")
             {
                 return operations.DeleteAsync(format, format1).GetAwaiter().GetResult();
             }
@@ -133,7 +133,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IImageAsCustomResultOperations operations, string format = default(string), string format1 = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(format, format1, null, cancellationToken).ConfigureAwait(false))
                 {

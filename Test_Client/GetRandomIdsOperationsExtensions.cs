@@ -21,7 +21,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
+            public static object Get(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
             {
                 return operations.GetAsync(take, format).GetAwaiter().GetResult();
             }
@@ -37,7 +37,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(take, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -53,7 +53,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
+            public static object Create(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
             {
                 return operations.CreateAsync(take, format).GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(take, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -85,7 +85,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
+            public static object Post(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
             {
                 return operations.PostAsync(take, format).GetAwaiter().GetResult();
             }
@@ -101,7 +101,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(take, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
+            public static object Delete(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json")
             {
                 return operations.DeleteAsync(take, format).GetAwaiter().GetResult();
             }
@@ -133,7 +133,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IGetRandomIdsOperations operations, int? take = default(int?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(take, format, null, cancellationToken).ConfigureAwait(false))
                 {

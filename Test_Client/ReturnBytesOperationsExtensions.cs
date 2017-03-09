@@ -5,8 +5,6 @@
 namespace TestClient
 {
     using Models;
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -23,7 +21,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static IList<byte[]> Get(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json")
+            public static string Get(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json")
             {
                 return operations.GetAsync(data, format).GetAwaiter().GetResult();
             }
@@ -39,7 +37,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<byte[]>> GetAsync(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<string> GetAsync(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -55,7 +53,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static IList<byte[]> Create(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json")
+            public static string Create(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json")
             {
                 return operations.CreateAsync(data, format).GetAwaiter().GetResult();
             }
@@ -71,7 +69,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<byte[]>> CreateAsync(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<string> CreateAsync(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -87,7 +85,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static IList<byte[]> Post(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json")
+            public static string Post(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json")
             {
                 return operations.PostAsync(data, format).GetAwaiter().GetResult();
             }
@@ -103,7 +101,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<byte[]>> PostAsync(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<string> PostAsync(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -119,7 +117,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static IList<byte[]> Delete(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json")
+            public static string Delete(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json")
             {
                 return operations.DeleteAsync(data, format).GetAwaiter().GetResult();
             }
@@ -135,7 +133,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<byte[]>> DeleteAsync(this IReturnBytesOperations operations, IList<byte[]> data = default(IList<byte[]>), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<string> DeleteAsync(this IReturnBytesOperations operations, byte[] data = default(byte[]), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(data, format, null, cancellationToken).ConfigureAwait(false))
                 {

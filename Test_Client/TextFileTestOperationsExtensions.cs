@@ -21,7 +21,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
+            public static object Get(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
             {
                 return operations.GetAsync(asAttachment, format).GetAwaiter().GetResult();
             }
@@ -37,7 +37,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(asAttachment, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -53,7 +53,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
+            public static object Create(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
             {
                 return operations.CreateAsync(asAttachment, format).GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(asAttachment, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -85,7 +85,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
+            public static object Post(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
             {
                 return operations.PostAsync(asAttachment, format).GetAwaiter().GetResult();
             }
@@ -101,7 +101,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(asAttachment, format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
+            public static object Delete(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json")
             {
                 return operations.DeleteAsync(asAttachment, format).GetAwaiter().GetResult();
             }
@@ -133,7 +133,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this ITextFileTestOperations operations, bool? asAttachment = default(bool?), string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(asAttachment, format, null, cancellationToken).ConfigureAwait(false))
                 {

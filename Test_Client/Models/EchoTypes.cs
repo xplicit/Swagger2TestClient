@@ -20,7 +20,7 @@ namespace TestClient.Models
         /// <summary>
         /// Initializes a new instance of the EchoTypes class.
         /// </summary>
-        public EchoTypes(byte[] byteProperty = default(byte[]), int? shortProperty = default(int?), int? intProperty = default(int?), long? longProperty = default(long?), int? uShortProperty = default(int?), int? uIntProperty = default(int?), long? uLongProperty = default(long?), double? floatProperty = default(double?), double? doubleProperty = default(double?), double? decimalProperty = default(double?), string stringProperty = default(string), System.DateTime? dateTime = default(System.DateTime?), string timeSpan = default(string), string dateTimeOffset = default(string), string guid = default(string), string charProperty = default(string))
+        public EchoTypes(int? byteProperty = default(int?), int? shortProperty = default(int?), int? intProperty = default(int?), long? longProperty = default(long?), int? uShortProperty = default(int?), int? uIntProperty = default(int?), long? uLongProperty = default(long?), double? floatProperty = default(double?), double? doubleProperty = default(double?), double? decimalProperty = default(double?), string stringProperty = default(string), System.DateTime? dateTime = default(System.DateTime?), string timeSpan = default(string), string dateTimeOffset = default(string), string guid = default(string), string charProperty = default(string))
         {
             ByteProperty = byteProperty;
             ShortProperty = shortProperty;
@@ -43,7 +43,7 @@ namespace TestClient.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Byte")]
-        public byte[] ByteProperty { get; set; }
+        public int? ByteProperty { get; set; }
 
         /// <summary>
         /// </summary>

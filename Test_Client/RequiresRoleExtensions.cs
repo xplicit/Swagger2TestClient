@@ -19,7 +19,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Get(this IRequiresRole operations, string format = "json")
+            public static object Get(this IRequiresRole operations, string format = "json")
             {
                 return operations.GetAsync(format).GetAwaiter().GetResult();
             }
@@ -33,7 +33,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> GetAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -47,7 +47,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Create(this IRequiresRole operations, string format = "json")
+            public static object Create(this IRequiresRole operations, string format = "json")
             {
                 return operations.CreateAsync(format).GetAwaiter().GetResult();
             }
@@ -61,7 +61,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> CreateAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> CreateAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateWithHttpMessagesAsync(format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -75,7 +75,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Post(this IRequiresRole operations, string format = "json")
+            public static object Post(this IRequiresRole operations, string format = "json")
             {
                 return operations.PostAsync(format).GetAwaiter().GetResult();
             }
@@ -89,7 +89,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> PostAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> PostAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostWithHttpMessagesAsync(format, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -103,7 +103,7 @@ namespace TestClient
             /// <param name='format'>
             /// Specifies response output format
             /// </param>
-            public static string Delete(this IRequiresRole operations, string format = "json")
+            public static object Delete(this IRequiresRole operations, string format = "json")
             {
                 return operations.DeleteAsync(format).GetAwaiter().GetResult();
             }
@@ -117,7 +117,7 @@ namespace TestClient
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<string> DeleteAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> DeleteAsync(this IRequiresRole operations, string format = "json", CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(format, null, cancellationToken).ConfigureAwait(false))
                 {

@@ -226,6 +226,11 @@ namespace TestClient
         public virtual IEchoCollectionsOperations EchoCollections { get; private set; }
 
         /// <summary>
+        /// Gets the IIdentityTestRequest2Operations.
+        /// </summary>
+        public virtual IIdentityTestRequest2Operations IdentityTestRequest2 { get; private set; }
+
+        /// <summary>
         /// Gets the IQueryRockstarsOperations.
         /// </summary>
         public virtual IQueryRockstarsOperations QueryRockstars { get; private set; }
@@ -363,6 +368,7 @@ namespace TestClient
             Wait = new WaitOperations(this);
             EchoTypes = new EchoTypesOperations(this);
             EchoCollections = new EchoCollectionsOperations(this);
+            IdentityTestRequest2 = new IdentityTestRequest2Operations(this);
             QueryRockstars = new QueryRockstarsOperations(this);
             Authenticate = new AuthenticateOperations(this);
             AssignRoles = new AssignRolesOperations(this);

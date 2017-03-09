@@ -5,8 +5,6 @@
 namespace TestClient.Models
 {
     using Newtonsoft.Json;
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Linq;
 
     /// <summary>
@@ -22,7 +20,7 @@ namespace TestClient.Models
         /// <summary>
         /// Initializes a new instance of the ReturnStream class.
         /// </summary>
-        public ReturnStream(IList<byte[]> data = default(IList<byte[]>))
+        public ReturnStream(byte[] data = default(byte[]))
         {
             Data = data;
         }
@@ -30,7 +28,7 @@ namespace TestClient.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Data")]
-        public IList<byte[]> Data { get; set; }
+        public byte[] Data { get; set; }
 
     }
 }

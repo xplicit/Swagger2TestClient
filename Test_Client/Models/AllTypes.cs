@@ -22,7 +22,7 @@ namespace TestClient.Models
         /// <summary>
         /// Initializes a new instance of the AllTypes class.
         /// </summary>
-        public AllTypes(int? id = default(int?), int? nullableId = default(int?), byte[] byteProperty = default(byte[]), int? shortProperty = default(int?), int? intProperty = default(int?), long? longProperty = default(long?), int? uShortProperty = default(int?), int? uIntProperty = default(int?), long? uLongProperty = default(long?), double? floatProperty = default(double?), double? doubleProperty = default(double?), double? decimalProperty = default(double?), string stringProperty = default(string), System.DateTime? dateTime = default(System.DateTime?), string timeSpan = default(string), string dateTimeOffset = default(string), string guid = default(string), string charProperty = default(string), string keyValuePair = default(string), System.DateTime? nullableDateTime = default(System.DateTime?), string nullableTimeSpan = default(string), IList<string> stringList = default(IList<string>), IList<string> stringArray = default(IList<string>), object stringMap = default(object), object intStringMap = default(object), SubType subType = default(SubType))
+        public AllTypes(int? id = default(int?), int? nullableId = default(int?), int? byteProperty = default(int?), int? shortProperty = default(int?), int? intProperty = default(int?), long? longProperty = default(long?), int? uShortProperty = default(int?), int? uIntProperty = default(int?), long? uLongProperty = default(long?), double? floatProperty = default(double?), double? doubleProperty = default(double?), double? decimalProperty = default(double?), string stringProperty = default(string), System.DateTime? dateTime = default(System.DateTime?), string timeSpan = default(string), string dateTimeOffset = default(string), string guid = default(string), string charProperty = default(string), string keyValuePair = default(string), System.DateTime? nullableDateTime = default(System.DateTime?), string nullableTimeSpan = default(string), IList<string> stringList = default(IList<string>), IList<string> stringArray = default(IList<string>), object stringMap = default(object), object intStringMap = default(object), SubType subType = default(SubType))
         {
             Id = id;
             NullableId = nullableId;
@@ -65,7 +65,7 @@ namespace TestClient.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Byte")]
-        public byte[] ByteProperty { get; set; }
+        public int? ByteProperty { get; set; }
 
         /// <summary>
         /// </summary>
